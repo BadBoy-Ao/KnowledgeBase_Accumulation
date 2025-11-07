@@ -1,0 +1,16 @@
+# 系统文件
+.DS_Store         # macOS系统文件
+Thumbs.db         # Windows缩略图缓存
+desktop.ini       # Windows文件夹配置
+
+# IDE/编辑器临时文件
+.idea/            # JetBrains IDE配置
+.vscode/          # VS Code配置
+*.tmp             # 临时文件
+*.bak             # 备份文件
+
+# 文档相关（按需添加）
+#~$*.docx          # Office临时文件
+#~$*.xlsx
+#~$*.pptx
+#*.log             # 日志文件
