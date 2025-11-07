@@ -392,6 +392,8 @@ pipenv lock -r > requirements.txt
      - 只有仓库有至少一次提交后，`git reset`才能正常使用。
    - **回退到之前的提交**（已`commit`）：`git reset --hard <提交ID>`---将工作区和暂存区都回退到指定的提交状态。【非常危险，之后的提交会被丢弃，***谨慎使用***】
 6. **远程仓库交互（协同与备份）：**
+   - **第一次提交：**`git remote add <自己命名，默认名origin> <远程仓库的URL>`
+   - **若输错 URL 需修正：：**`git remote set-url origin 新地址.git`
    - **查看远程仓库：**`git remote -v`---显示已配置的远程仓库地址
    - **推送（Push）：**`git push origin <分支名>`---将本地指定分支的提交推送到名为`origin`的远程仓库。【例如，首次推送主分支：`git push -u origin main`（`-u`设置上游关联），后续可直接`git push`（因为设置了 `-u`，会推送到关联的远程分支）高频使用】
    - **拉取（Pull）：**`git pull origin <分支名>`---从远程仓库获取指定分支的最新更改，并尝试自动合并到你的当前分支。【高频使用】
