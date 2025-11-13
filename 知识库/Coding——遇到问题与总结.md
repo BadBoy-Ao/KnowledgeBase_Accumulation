@@ -423,3 +423,147 @@ git rm --cached -r .idea/
 ```bash
 git check-ignore -v 文件名  # 确认指定文件是否被忽略
 ```
+
+## Python 库
+
+### zipfile 库
+
+​	`zipfile`模块的基本作用：创建、读取、写入和提取 ZIP 文件。能够执行常见的 ZIP 文件操作（创建压缩包、添加文件、解压文件）。
+
+- `zipfile.ZipFile`类构造函数中的`mode`参数：
+
+| 模式 | 含义                                                         | 作用                                          |
+| :--: | :----------------------------------------------------------- | :-------------------------------------------- |
+| `r`  | **读取模式（Read）**：打开一个现有的 ZIP 文件以供读取。      | 这是访问和提取 ZIP 文件内容的标准模式。       |
+| `w`  | **写入模式（Write）**：创建一个新的 ZIP 文件（如果文件已存在则会覆盖）。 | 用于向新的归档文件中添加文件。                |
+| `x`  | **独占创建模式（Exclusive Create）**：创建一个新的 ZIP 文件，如果该文件已经存在，则会引发 `FileExistsError`异常。 | 这确保不会意外覆盖现有文件。                  |
+| `a`  | **追加模式（Append）**：打开一个现有的 ZIP 文件以供写入。如果文件不存在，则会创建一个新文件。 | 主要用于向现有的 ZIP 归档文件中添加更多文件。 |
+
+- `compression`指定创建ZIP文件时使用的默认压缩方法：
+
+|          模式          | 含义                | 作用                                             |
+| :--------------------: | :------------------ | :----------------------------------------------- |
+|  `zipfile.ZIP_STORED`  | 不压缩，仅存储文件  | 这是最快速但压缩率最低的方法                     |
+| `zipfile.ZIP_DEFLATED` | 标准的 ZIP 压缩方法 | 提供了较好的压缩比和速度平衡，是最常见的压缩方式 |
+|  `zipfile.ZIP_BAIP2`   | 使用 bzip2 算法压缩 | 通常提供最高的压缩比，但压缩和解压缩速度较慢     |
+|   `zipfile.ZIP_LZMA`   | 使用 LZMA 算法压缩  | 也提供很高的压缩比，尤其适用于某些类型的数据     |
+
+
+
+#### 模块导入
+
+- 模块名称：`zipfile`
+- 核心类：`zipfile.ZipFile`-代表一个 ZIP 归档文件对象，用于对其进行各种操作。
+
+```python
+# 导入方式
+import zipfile
+```
+
+#### 创建 ZIP 文件（写模式）
+
+​	将一些文件打包成一个`.zip`压缩包。
+
+关键步骤：
+
+- 使用`with`语句打开一个 ZIP 文件（类似操作文件），指定模式为`w`(write)。如果文件不存在会自动创建。
+- 使用`ZipFile`对象的`.write(filename, arcname=None)`方法添加文件。
+  - `filename`: 你要添加到压缩包中的本地文件路径；
+  - `arcname`: （可选）文件在 ZIP 包内的名称。如果不指定，则使用 `filename` 的basename。
+
+```python
+import zipfile
+
+files_to_zip = ['file1.txt', 'file2.txt']
+zip_filename = 'my.archive.zip'
+
+# 使用 with 语句确保文件正确关闭
+with zipfile.ZipFile(zipfilename, 'w') as zipd:
+    for file in files_to_zip:
+        # 添加文件到压缩包，使用原始文件名
+        zipf.write(file)
+        print(f"已添加 {file} 到 {zip_filename}")
+
+print(f"ZIP 文件 {zip_filename} 创建成功！")
+```
+
+#### 从 ZIP 文件中提取文件（读模式）
+
+​	当你需要解压一个现有的`.zip`文件时，用该方法。
+
+关键步骤：
+
+- 使用`with`语句打开 ZIP 文件，指定模式为`r`(read)；
+- 使用`ZipFile`对象的方法：
+  - `.extract(member, path=None)`：提取单个成员（`member`是文件名）到指定路径（`path`），默认是当前目录。
+  - `.extractall(path=None)`：提取所有成员到指定路径。
+
+```python
+import zipfile
+import os
+
+# 假定在“写模式”创建了“my_archive.zip”
+zip_filename = 'my_archive.zip'
+extract_to_folder = 'extracted_files'
+
+# 确保目标文件夹存在
+os.makedirs(extract_to_folder, exist_ok=True)
+
+with zipfile.ZipFile(zip_filename, 'r') as zipf:
+    # 方法一：提取所有文件
+    zipf.extractall(path=extract_to_floder)
+    print(f"所有文件已解压到‘{extract_to_floder}'")
+    
+    # 方法二：只提取特定文件
+    # specific_file = 'file1.txt'
+    # zipf.extract(specific_file, path=extract_to_folder)
+    # print(f"文件'{specific_file}'已解压到‘{extract_to_floder}'")
+```
+
+#### 查看 ZIP 文件内容
+
+​	在解压前，你要知道压缩包里有什么。
+
+关键属性 / 方法：
+
+- `ZipFile.namelist()`：返回 ZIP 文件中所有成员（文件和文件夹）名称的列表。
+
+```python
+import zipfile
+
+zip_filename = 'my_archive.zip'
+
+with zipfile.ZipFile(zip_filename, 'r') as zipf:
+    # 获取 ZIP 文件内所有文件 / 目录的名称列表
+    file_list = zipf.namelist()
+    print(f"ZIP 文件'{zip_filename}'包含以下内容：")
+    for filename in file_list:
+        print(f" - {filename}")
+```
+
+#### 向现有 ZIP 文件追加文件（追加模式）
+
+​	如果你已经有一个 ZIP 文件，并想往里面加点文件。
+
+关键步骤：
+
+- 使用`with`语句打开 ZIP 文件，指定模式为`a`(append)。
+- 同样使用`.wirte()`方法添加新文件。
+
+```python
+import zipfile
+
+# 假定在“写模式”创建了“my_archive.zip”
+zip_filename = 'my_archive.zip'
+new_file_to_add = 'another_file.txt' # 需要先创建 / 存在该文件
+
+# 追加模式 'a'
+with zipfile.ZipFile(zip_filename, 'a') as zipf:
+    zipf.wirte(new_file_to_add)
+    print(f"已将 '{new_file_to_add}' 追加到 '{zip_filename}'")
+    
+# 可以再次查看内容确认
+with zipfile.ZipFile(zip_filename, 'r') as zipf:
+    print("追加后的 ZIP 内容：", zipf.namelist())
+```
+
