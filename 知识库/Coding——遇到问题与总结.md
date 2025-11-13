@@ -567,3 +567,4 @@ with zipfile.ZipFile(zip_filename, 'r') as zipf:
     print("追加后的 ZIP 内容：", zipf.namelist())
 ```
 
+### enumerate函数
