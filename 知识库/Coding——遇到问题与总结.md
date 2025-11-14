@@ -590,3 +590,50 @@ with zipfile.ZipFile(zip_path, 'r') as zip_file:
 |   file_info.is_dir()    |  判断该成员是否为目录（返回`True` / `False`）   |
 
 ### enumerate函数
+
+
+
+### json库
+
+​	json 核心方法总结（序列化 + 反序列化）——dumps， loads， load。
+
+1. `dumps`：Python => JSON字符串；
+2. `loads`：JSON字符串 => Python；
+3. `load`：JSON文件 => py
+
+|      方法      |                  功能                  |                           关键参数                           | 使用场景                                                     |
+| :------------: | :------------------------------------: | :----------------------------------------------------------: | ------------------------------------------------------------ |
+| `json.dumps()` |   Python 对象=>JSON 字符串（序列化）   | 1. `indent`: 缩进空格数(如 2)；<br />2. `ensure_ascii`:是否转义非ASCII（False 保留中文） | 1. 打印 / 日志输出结构化数据；<br />2. 向 API 发送 JSON 格式请求；<br />3. 保存 JSON 字符串到文件； |
+| `json.loads()` | JSON 字符串 => Python 对象（反序列化） |                     仅需传入 JSON 字符串                     | 1. 解析 API 返回的 JSON 响应；<br />2. 读取文件中存储的 JSON 字符串； |
+| `json.load()`  |  JSON 文件 => Python 对象（反序列化）  |                       仅需传入文件对象                       | 直接读取本地 JSON 文件（无需手动读字符串）                   |
+
+- `json.dumps()`简单代码示例：
+
+```python
+data = {
+    "name": "张三",
+    "age": 25
+}
+
+json_str = json.dumps(data, indent=2, ensure_ascii=False)
+
+print(json_str) # 格式化输出，中文不转义
+```
+
+- `json.loads()`简单代码示例：
+
+```python
+json_str = '{"name":"张三","age":25}'
+
+data = json.loads(json_str)
+
+print(data["name"]) # 直接操作 Python 字典
+```
+
+- `json.load()`简单代码示例：
+
+```python
+with open("data.json", "r", encoding="utf-8") as f:
+    data = json.load(f) # 直接从文件解析为Python对象
+```
+
