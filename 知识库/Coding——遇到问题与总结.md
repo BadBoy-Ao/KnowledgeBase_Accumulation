@@ -567,4 +567,26 @@ with zipfile.ZipFile(zip_filename, 'r') as zipf:
     print("追加后的 ZIP 内容：", zipf.namelist())
 ```
 
+#### 方法
+
+假定类为`zip_file`，在代码中写入 `with zipfile.ZipFile(zip_filename_path, 'w') as zip_file`
+
+##### `zip_file.infolist()`
+
+​	`zip_file.infolist()`方法会返回 ZIP 包中所有成员（文件 / 目录）的`ZipInfo`对象列表，通过`file_info`可以获取每个成员的详细属性，方便对 ZIP 内的文件进行操作（如判断是否为目录、获取文件大小、提取文件等）
+
+```python
+with zipfile.ZipFile(zip_path, 'r') as zip_file:
+    for file_info in zip_file.infolist():
+        file_name = file_info.filename()
+        # 返回该成员在 ZIP 包中的完整路径和文件名（如 小花钱包-报备/小花资金方/锡商银行-营业执照.pdf）
+```
+
+|      其他实用属性       |                      作用                       |
+| :---------------------: | :---------------------------------------------: |
+|   file_info.file_size   |         文件未压缩时的原始大小（Byte）          |
+| file_info.compress_size |        文件在 ZIP 中压缩后的大小（Byte）        |
+|   file_info.data_time   | 文件的修改时间（元组格式`(年,月,日,时,分,秒)`） |
+|   file_info.is_dir()    |  判断该成员是否为目录（返回`True` / `False`）   |
+
 ### enumerate函数
