@@ -2,6 +2,441 @@
 
 # Transformer To Chinese-AI Product Manager HandBook 
 
-## 封面
+# 封面
 
 ​	构建、整合(integrate)、扩展(scale)和优化(optimize)产品，以成长为人工智能产品经理。
+
+# 目录
+
+- Preface
+  - 【序言】
+- Part I : Lay of the Land - Terms, Infrastructure, Types of AI, and Products Done Well
+  - 【第一部分 ：领域概念（整体情况） - 关键术语、技术基础、AI类型以及优秀的项目】
+- Chapter 1 : Understanding the Infrastructure and Tools for Building AI Products
+  - 【第一章：了解构建AI产品的基础设施与工具】
+  - Definitions - What AI is and is not
+    - 【定义 - AI 是什么，又不是什么】
+  - Introducing ML and DL
+    - 【介绍机器学习（Machine Learning）以及深度学习（Deep Learning）】
+    - The old - exploring ML
+      - 【旧的篇章 - 探索 机器学习】
+    - A brief history of DL
+      - 【深度学习的简史】
+    - The new - exploring DL
+      - 【新的篇章 - 探索 深度学习】
+    - Invisible influences
+      - 【无形的影响】
+  - ML versus DL - understanding the difference
+    - 【对比 ML 和 DL - 理解他们的不同】
+    - ML
+    - DL
+  - Learning paradigms in ML
+    - Supervised learning
+    - Unsupervised learning
+    - Semi-supervised learning
+    - Reinforcement learning
+  - LLMs, NLP, GANs, and generative AI
+  - Succeeding in AI - how well-managed AI companies do infrastructure right
+  - The order - what is the optimal flow and where does every part of the process live ?
+    - Step 1 - Definition
+    - Step 2 - Data availability and centralization
+    - Step 3 - Choose and train the model
+    - Step 4 - Feedback
+    - Step 5 - Deployment
+    - Step 6 - Continuous maintenance
+  - Storing and managing data
+    - Database
+    - Data warehouse
+    - Data lake (and lakehouse)
+    - Data pipelines
+  - Managing projects - IaaS
+  - Deployment strategies - what do we do with these outputs ?
+    - Shadow deployment strategy
+    - A / B testing model deployment strategy
+    - Canary deployment strategy
+    - Example
+  - The promise of AI - where is AI taking us ?
+  - Summary
+  - Additional resources
+  - References
+- Chapter 2 : Model Development and Maintenance for AI Products
+  - Understanding the stages of NPD
+    - Step 1 - Discovery
+    - Step 2 - Define
+    - Step 3 - Design
+    - Step 4 - Implementation
+    - Step 5 - Marketing
+    - Step 6 - Beta testing
+    - Step 7 - Launch
+  - Model types - from linear regression to neural networks
+  - OKRs
+    - Objectives and key results
+    - Metrics and KPIs
+  - Training - When is a model ready for market ?
+  - Deployment - what happens after traing ?
+  - Testing and troubleshooting
+  - Ethical retraining - the ethics of how often we updata out models
+    - The current state of accountability
+    - Implementing ethical standards in your organization
+  - Summary
+  - Additional resources
+  - References
+- Chapter 3 : Deep Learning Deep Dive
+  - Types of neural networks
+    - Multilayer perceptrons
+  - Case study
+    - Radial basis function networks
+    - Self-organizing maps
+    - Convolutional neural networks
+    - Recurrent neural networks
+    - Long short-term memory networks
+    - Deep belief networks
+  - Exploring generative AI models
+    - Generative adversarial networks
+    - Autoencoders
+    - Diffusion models
+    - Transformer models
+  - Emerging technologies - ancillary and related tech
+  - Explainability - optimizing for ethics, caveats, and responsibility
+  - Guidelines for success
+  - Summary
+  - References
+  - Leave a Review !
+
+- Chapter 4 : Commercializing AI Products
+  - The professionals - examples of B2B products done right
+  - The artists - examples of B2C products done right
+  - The pioneers - examples of blue ocean products
+  - The rebels - examples of red ocean products
+  - The GOATs - examples of differentiated disruptive and dominant strategy products
+    - The dominant strategy
+    - The disruptive strategy
+    - The differentiated strategy
+  - Summary
+  - References
+- Chapter 5 : AI Tranformation and Its Impact on Product Management
+  - Money and value - how AI could revolutionize our economic systems
+    - Examples and use cases
+    - Limitations and uneven adoption
+    - Product perspective
+  - Sickness and health - the benefits of AI and nanotech across healthcare
+    - Examples and use cases
+    - Product perspective
+  - Goods and services - growth in commercial applications
+    - Examples and use cases
+    - Product perspective
+  - Government and autonomy - how AI will shape our borders and freedom
+  - Basic needs - AI for Good
+  - Summary
+  - Additional resources
+  - References
+
+- Part II : Building an AI-Native Product
+- Chapter 6 : Understanding the AI-Native Product
+  - Stages of AI product development
+    - Phase 1 - Ideation
+    - Phase 2 - Data management
+    - Phase 3 - Research and development
+    - Phase 4 - Deployment
+  - AI / ML product dream team
+    - AI  PM 
+    - AI / ML / data strategists / architects
+    - Data engineer
+    - Data analyst
+    - Data scientist
+    - ML engineer
+    - Frontend / backend / full stack engineer
+    - QA / testing engineer
+    - UX designer / researcher
+    - Customer success specialist
+    - Marketing / sales / go-to-market team
+  - Investing in your tech stack
+  - Productizing AI-powered outputs - how AI product management is differnt
+  - AI  customization
+  - Selling AI - product management as a higher octave of sales
+  - Case study
+    - AI product development cycle
+    - Team breakdown
+    - Tech stack
+    - AI outputs
+  - Summary
+    - GTM strategy and verticalization
+  - References
+- Chapter 7 : Productizing the ML Service
+  - Basics of productizing
+  - AI versus traditional software product management
+    - How are the products different ?
+      - *Scalability*
+      - *Profit margins*
+      - *Uncertainty*
+    - How are the products similar ?
+      - *Agile development*
+      - Data
+    - How does the role of an AI PM compare with a traditional PM ?
+  - B2B versus B2C - productizing business models
+    - Domain knowledge for B2B products - understanding the needs of your market
+    - Experimentation with B2C products - discover the needs of your collective
+    - Using AIOps/MLOps
+      - Consistency and AIOps/MLOps - reliance and trust
+      - Performance evaluation - testing, retraining, and hyperparameter tuning
+      - Feedback loop - relationship building
+    - Case study
+    - Summary
+    - References
+- Chapter 8 : Customization for Verticals, Customers, and Peer Groups
+  - Domains - orienting AI toward specific areas
+    - Understanding your market
+    - Understanding how your product design will serve your market
+    - Building your AI product strategy
+  - Verticals - examination of some key domains
+    - Fintech
+      - *CHatbots and virtual assistants*
+      - *Fraud detection*
+      - *Algorithmic trading and predictive analytics*
+    - Healthcare
+      - *Imaging and diagnosis*
+      - *Drug discovery and research*
+    - Marketing - segmentation
+    - Manufacturing - predictive management
+    - Education - presonalized learning
+    - Cybersecurity - anomaly detection and user and entity vehavior analytics
+  - Thought leadership - learning from peer groups
+  - Case Study
+    - The market
+    - Product design and strategy
+    - Thought leadership
+  - Summary
+  - References
+
+- Chapter 9 : Product Design for the AI-Native Product
+  - Product design elements 101
+    - Understanding the end user
+    - Defining the problem
+    - Experimentation
+    - Validation
+    - Iteration
+    - Aesthetics
+    - Doucumentation
+  - What makes the AI-native product design process special ?
+    - User obsession
+    - Machine learning
+    - Explainablity
+  - Choosing your priorities wisely
+    - Ensuring clarity
+    - Adding complexity
+    - Branding
+  - What's the story you're telling ?
+    - Set the stage
+    - Characters
+    - Progression
+    - Knowledge
+    - Call to action
+  - Case study
+  - Summary
+  - References
+- Chapter 10 : Benchmarking Performance, Growth Hacking and Cost
+  - Value metrics - a guide to north star metrics, KPIs and OKRs ...
+    - North star metrics
+    - KPIs and other metrics
+    - OKRs and product strategy
+  - Hacking - product-led growth
+  - The tech stack - early signals
+    - Customer data platforms (CDPs)
+    - Customer engagement platforms (CEPs)
+    - Product analytics tools
+    - A / B testing tools
+    - Data warehousers
+    - Business Intelligence (BI) tools
+    - Growth-hacking tools
+  - Managing costs and pricing - AI is expensive
+  - Case study
+    - North star metrics
+    - KPIs
+    - OKRs
+    - Growth hacking
+  - Summary
+  - References
+- Chapter 11 : Managing the AI-Native Product
+  - The head - Managing alignment
+    - Vision
+    - Good vision statements
+    - Bad vision statements
+    - Communication
+  - The heart - Managing people and values
+    - Safety
+    - Empowerment
+  - The guts - Managing the rest
+  - Case study
+  - Summary
+  - References
+- Part IV : Integrating AI into Existing Traditional Software Products
+- Chapter 12 : The Rising Tide of AI
+  - Evolve or die - when change is the only constant
+  - Changes in the Fourth Industrial Revolution
+    - Cultural and structural changes
+    - Working with a third party
+    - Working with a third party
+    - The first hire
+    - The first AI team
+  - Fear is not the answer - there is more to gain than lose (or spend)
+  - Anticipating potential risks
+  - How LLMs are evolving and the rise of open source LLM capabilities
+  - Case study
+    - Implementation
+    - Risks
+  - Summary
+  - References
+    - Markers of success
+  - Join us on Discord
+- Chapter 13 : Trends and Insights Across Industry
+  - Highest growth areas for AI integration
+    - Applied / embedded AI - applied and integrated use cases
+    - Ethical AI - responsibility and privacy
+    - GenAI - immersive applications
+    - Autonomous AI development - TuringBots
+  - Low-hangjing fruit - quickest wins for AI enablement
+  - Riding the GenAI wava
+  - Summary
+  - References
+- Chapter 14 : Evolving Products into AI Products
+  - Ideation - What's possible, what's desirable, and what's probable
+    - List 1 - value
+    - List 2 - scope
+    - List 3 - reach
+  - Case study
+    - Value
+    - Scope
+    - Reach
+  - Data management - the bloodstream of the company
+    - Preparation and research
+    - Ensuring quality partnerships
+    - Benchmarking and defining success
+  - Competition - love your enemies
+  - Product strategy - building a blueprint that works for everyone
+    - Product vision
+    - Product strategy
+    - Product goals
+    - The Product roadmap
+  - Red flags and green flags - what to look for and watch out for
+    - Red flags
+    - Green flags
+  - Summary
+  - Additional resources
+- Chapter 15 : The Role of AI Product Design
+  - The evolution of product design
+    - Ideation : Managing expectations
+    - Data management : Strategizing and integrity
+    - R & D : Mapping the user experience journey
+    - Deployment : Are you ready to scale ?
+  - Expansion : What makes the evolved AI product special ?
+    - Decisions and insights
+    - Automation and adaptability
+    - Personalization and learning
+  - Choosing your words carefully
+    - Product language fit
+    - Accessibility and inclusivity
+  - Building with trust and security
+    - Bias
+    - Accountability and explianability
+    - Security
+  - Case study
+    - Integrating AI into ProjectABZ: A project management tool created by ABCDZCo
+    - Ideation and research
+    - Design and development
+    - Marketing and communication
+  - Summary
+  - References
+- Chapter 16 : Managing the Evolving AI Product
+  - The head - managing alignment
+    - Strategic alignment
+    - Feedback loops
+  - The heart - managing the people and values
+  - The guts - managing data, infrastructure, and ongoing maintenance
+    - Infrastructure
+    - Maintenance
+  - Case study
+    - AI transformation for ProjectABZ
+      - *Management alignment*
+      - *People alignment*
+      - *Operational alignment*
+      - *Results and outcomes*
+  - Summary
+- Part IV : Managing the AI PM Career
+- Chapter 17 : Starting a Career as an AI PM
+  - Bolstering your knowledge in theory and practice
+    - Theory
+    - Practice
+  - What an AI PM looks like today
+  - The importance of communities
+  - Choosing your AI PM specialization
+  - Case study
+  - Summary
+  - References
+- Chapter 18 : What Does It Mean To Be a Good AI PM ?
+  - A job family of many hats
+    - Technical proficiency
+      - *Technologist*
+      - *AI expert*
+      - *Technical translator*
+      - *Data steward*
+      - *Data strategist*
+      - *Quality controller*
+      - *Analyst*
+    - Business acumen
+      - *Strategist*
+      - *Revenue driver*
+      - *Partnership builder*
+      - *Innovator* 
+      - *Market researcher*
+      - *Competitor analyst*
+    - Communication
+      - *Project manager*
+      - *Change agent*
+      - *Stakeholder manager*
+      - *Educator*
+      - *Risk assessor*
+    - Leadership
+      - *Visionary*
+      - *Ethicist*
+      - *Team leader*
+      - *Storyteller*
+      - *Motivator*
+      - *Knowledge sharer*
+    - Problem solving
+      - *Customer advocate*
+      - *Regulatory complier*
+      - *Facilitator*
+      - *Data-driven decision maker*
+      - *Adaptability manager*
+      - *Conflict resolver*
+  - The AI whisperer and the role of communicating accessibly
+  - Common challenges and opportunities as you're leveling up in your carrer
+  - The importance of self-care
+  - Case study
+  - Summary
+- Chapter 19 : Maturing and Growing as an AI PM
+  - Projecting - What's your ideal AI PM roadmap ?
+    - Level 1 - building a foundation
+    - Level 2 - strategic growth
+    - Level 3 - specializing and leading
+    - Level 4 - a light for others
+  - Learning - staying informed and inspired
+    - Thought leadership
+    - Certifications and degrees
+    - Professional development
+  - Networking - deepening your involvement with the professional community
+  - Growing - the student becomes the teacher
+    - Embracing challenges
+    - Reflecting
+    - Establishing a feedback loop
+  - What's next ? The world is our oyster
+  - Case study
+    - Projecting
+    - Learning
+    - Networking
+    - Growing
+    - What's next
+  - Summary
+- Other Books You May Enjoy
+- Index
+
