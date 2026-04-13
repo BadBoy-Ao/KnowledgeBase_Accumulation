@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>报备生成控制台</title>
+  <link rel="stylesheet" href="/ui/styles.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>报备生成控制台</h1>
+        <p>山东 4 个模板 + 北京 3 个模板</p>
+      </div>
+
+      <section class="panel compact">
+        <label for="templateSelect">模板类型</label>
+        <select id="templateSelect"></select>
+        <div class="button-row">
+          <button id="loadSampleButton" class="secondary">加载样例</button>
+          <button id="resetButton" class="ghost">清空</button>
+        </div>
+      </section>
+
+      <section class="panel compact">
+        <h2>接口</h2>
+        <ul class="plain-list">
+          <li><code>GET /api/v1/reports/templates</code></li>
+          <li><code>GET /api/v1/reports/sample/{templateType}</code></li>
+          <li><code>POST /api/v1/reports/generate</code></li>
+        </ul>
+      </section>
+
+      <section class="panel compact">
+        <h2>说明</h2>
+        <ul class="plain-list">
+          <li>左侧选择模板并加载样例</li>
+          <li>可直接编辑 JSON 请求体</li>
+          <li>提交后返回 ZIP、图片、DOCX、PDF 路径</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="content">
+      <section class="panel hero">
+        <div>
+          <h2>统一报备文档生成</h2>
+          <p>围绕当前 Python 服务的 7 个模板能力设计，适合作为后续管理调度页面的基础版本。</p>
+        </div>
+        <div class="hero-actions">
+          <button id="generateButton">生成 ZIP</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h3>请求体</h3>
+            <button id="formatButton" class="secondary">格式化</button>
+          </div>
+          <textarea id="payloadInput" spellcheck="false"></textarea>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>结果</h3>
+            <span id="statusBadge" class="badge idle">未执行</span>
+          </div>
+          <pre id="resultOutput" class="output">等待生成结果...</pre>
+        </section>
+      </section>
+
+      <section class="grid lower-grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h3>快捷调用样例</h3>
+          </div>
+          <pre id="curlOutput" class="output small"></pre>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>模板字段提示</h3>
+          </div>
+          <div id="fieldHints" class="hint-box"></div>
+        </section>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="panel-header">
+          <h3>图片预览</h3>
+          <span id="previewMeta" class="preview-meta">生成后显示</span>
+        </div>
+        <div id="previewGrid" class="preview-grid">
+          <div class="preview-empty">等待生成图片...</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>
