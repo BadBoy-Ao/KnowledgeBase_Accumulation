@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:x14="http://schemas.microsoft.com/office/spreadsheetml/2009/9/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:etc="http://www.wps.cn/officeDocument/2017/etCustomData">
+<sheetPr/>
+<dimension ref="D4"/>
+<sheetViews>
+<sheetView tabSelected="1" workbookViewId="0">
+<selection activeCell="J8" sqref="J8"/>
+</sheetView></sheetViews>
+<sheetFormatPr defaultColWidth="9" defaultRowHeight="14.4" outlineLevelRow="3" outlineLevelCol="3"/>
+<cols>
+<col min="4" max="4" width="13.8888888888889"/>
+</cols>
+<sheetData>
+<row r="4" ht="75" spans="4:4">
+<c r="D4" t="str">
+<f>_xlfn.DISPIMG(&quot;ID_298A2555B4ED441594B901E727D1A1F1&quot;,1)</f><v>=DISPIMG(&quot;ID_298A2555B4ED441594B901E727D1A1F1&quot;,1)</v>
+</c>
+</row>
+</sheetData>
+<pageMargins left="0.7" right="0.7" top="0.75" bottom="0.75" header="0.3" footer="0.3"/><pageSetup paperSize="9" orientation="portrait"/>
+<headerFooter/>
+</worksheet>

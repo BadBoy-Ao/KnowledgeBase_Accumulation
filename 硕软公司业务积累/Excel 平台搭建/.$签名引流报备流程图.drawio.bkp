@@ -1,0 +1,22 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="第 1 页" id="MpZMjmBMzmVuh3qQ-Epd">
+    <mxGraphModel dx="1042" dy="1522" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="D7AzFjpvxyi1qJ5veKWr-1" parent="1" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" value="整理表格全流程" vertex="1">
+          <mxGeometry height="551" width="540" x="155" y="-660" as="geometry" />
+        </mxCell>
+        <mxCell id="D7AzFjpvxyi1qJ5veKWr-2" parent="D7AzFjpvxyi1qJ5veKWr-1" style="swimlane;startSize=20;html=1;" value="Lane 1" vertex="1">
+          <mxGeometry height="531" width="180" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7AzFjpvxyi1qJ5veKWr-3" parent="D7AzFjpvxyi1qJ5veKWr-1" style="swimlane;startSize=20;html=1;" value="Lane 2" vertex="1">
+          <mxGeometry height="531" width="180" x="180" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="D7AzFjpvxyi1qJ5veKWr-4" parent="D7AzFjpvxyi1qJ5veKWr-1" style="swimlane;startSize=20;html=1;" value="Lane 3" vertex="1">
+          <mxGeometry height="531" width="180" x="360" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
